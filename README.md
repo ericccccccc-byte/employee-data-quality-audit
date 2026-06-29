@@ -1,10 +1,21 @@
-# Employee Data Quality Audit — Excel Project
+# Employee Data Quality Audit (Microsoft Excel)
 
-## Overview
+A complete Excel project focused on cleaning messy HR data, documenting every issue found, and analysing the cleaned dataset to generate business insights.
 
-This project simulates a real-world data cleaning and analysis task performed on a raw HR employee dataset. The goal was to identify all data quality issues, resolve them systematically, document the audit trail, and derive meaningful insights from the cleaned data — all using Microsoft Excel.
+The objective of this project was to practise the kind of data quality checks and cleaning tasks that are commonly performed before any business analysis can begin.
 
-This is the kind of work a data analyst is expected to do on day one at any company that receives data from multiple sources.
+---
+
+## Project Objective
+
+Raw business data often contains duplicates, missing values, inconsistent formatting, and invalid entries. In this project, I started with an intentionally messy HR dataset and performed a complete data quality audit using Microsoft Excel.
+
+The project includes:
+
+- Identifying data quality issues
+- Cleaning and standardising the dataset
+- Recording every cleaning action in an audit report
+- Analysing the cleaned data to generate business insights
 
 ---
 
@@ -12,93 +23,151 @@ This is the kind of work a data analyst is expected to do on day one at any comp
 
 - Microsoft Excel
 
-## Skills Demonstrated
+---
 
-- Data Cleaning (TRIM, CLEAN, PROPER, LOWER, LEN)
-- Handling Missing Values
-- Removing Duplicates
-- Standardising Text Casing
-- Date Formatting
-- Data Validation with Custom Error Alerts
+## Excel Skills Demonstrated
+
+- Data Cleaning
+- Data Validation
 - Conditional Formatting
-- COUNTIF, SUMIF formulas
-- Data Analysis and Summarisation
+- Duplicate Detection & Removal
+- Missing Value Handling
+- Text Standardisation
+- Date Formatting
+- Data Quality Auditing
+- Basic Data Analysis
+
+### Excel Functions Used
+
+- TRIM()
+- CLEAN()
+- PROPER()
+- LOWER()
+- LEN()
+- COUNTIF()
+- SUMIF()
 
 ---
 
-## Dataset
+## Dataset Information
 
-- **Source:** Synthetic HR dataset created for this project
-- **Size:** 12 records, 9 columns
-- **Columns:** Emp_ID, Full_Name, Department, City, Join_Date, Salary, Phone, Email, Status
+| Item | Details |
+|------|---------|
+| Dataset | Synthetic HR Employee Dataset |
+| Records | 12 |
+| Columns | 9 |
+| Workbook Sheets | 4 |
 
----
+Columns included:
 
-## Project Structure
-
-The workbook contains 4 sheets:
-
-### Sheet 1 — Raw Data
-The original uncleaned dataset with intentional data quality issues highlighted for visibility.
-
-Issues present in the raw data:
-- 1 duplicate row (Rahul Verma appears twice with identical details)
-- 1 missing join date (Neha Gupta)
-- 1 missing phone number (Ankit Jain)
-- 1 invalid status value — "unknown" instead of Active or Inactive (Rohan Mehta)
-- 1 inconsistent name casing — "VIKAS KUMAR" in all caps
-
-### Sheet 2 — Cleaned Data
-The fully cleaned version of the dataset after all issues were resolved. N/A values are highlighted in orange for easy identification.
-
-Cleaning steps applied:
-- TRIM(CLEAN()) applied to remove hidden spaces from text columns
-- LEN() used to detect phone numbers with incorrect character counts
-- PROPER() applied to standardise all name casing
-- LOWER() applied to standardise email addresses
-- Ctrl+G Special Blanks used to identify and fill all empty cells with N/A
-- Find and Replace used to correct the "unknown" status value to N/A
-- Remove Duplicates applied on the Email column — 1 duplicate removed
-- Date column formatted consistently as DD-MM-YYYY
-- Data Validation added to Status column to restrict entries to Active, Inactive, or N/A only
-
-### Sheet 3 — Audit Summary
-A formal audit report documenting:
-- KPI summary: total records, records after cleaning, issues found, issues resolved, data quality score
-- Issue log table listing each problem, the column affected, records impacted, and action taken
-- Full list of all cleaning steps applied
-
-### Sheet 4 — Analysis
-Key insights derived from the cleaned dataset:
-- Headcount by department with percentage of total workforce
-- Salary analysis by department showing total, average, and highest salary
-- Employee status breakdown (Active, Inactive, N/A)
-- 5 written business insights summarising the findings
+- Employee ID
+- Full Name
+- Department
+- City
+- Join Date
+- Salary
+- Phone Number
+- Email
+- Status
 
 ---
 
-## Key Findings
+# Workbook Structure
 
-- Sales has the largest team with 4 employees making up 36.4% of the workforce
-- IT department has the highest average salary at 67,500
-- Sales has the lowest average salary at 47,250 despite being the largest team
-- 72.7% of employees are Active
-- Total monthly payroll is 6,01,000 across all departments
+## Sheet 1 — Raw Data
+
+Contains the original dataset with multiple data quality issues intentionally introduced.
+
+Issues identified:
+
+- Duplicate employee record
+- Missing Join Date
+- Missing Phone Number
+- Invalid Status value
+- Inconsistent text casing
 
 ---
 
-## How to Use
+## Sheet 2 — Cleaned Data
 
-1. Open `Employee_Data_Quality_Audit.xlsx` in Microsoft Excel
-2. Start with Sheet 1 to see the original raw data and identified issues
-3. Compare with Sheet 2 to see the cleaned version
-4. Review Sheet 3 for the full audit trail
-5. Explore Sheet 4 for analysis and business insights
+After identifying every issue, the dataset was cleaned using Excel functions and built-in tools.
+
+Cleaning steps performed:
+
+- Removed extra spaces using **TRIM()** and **CLEAN()**
+- Standardised employee names using **PROPER()**
+- Converted email addresses to lowercase using **LOWER()**
+- Checked phone number lengths using **LEN()**
+- Replaced blank values with **N/A**
+- Corrected invalid status values
+- Removed duplicate records
+- Applied consistent date formatting
+- Added Data Validation to prevent invalid Status entries
+
+---
+
+## Sheet 3 — Audit Summary
+
+A complete audit report documenting the cleaning process.
+
+Includes:
+
+- Total records
+- Records after cleaning
+- Number of issues identified
+- Number of issues resolved
+- Data Quality Score
+- Issue Log
+- Cleaning Steps Performed
+
+---
+
+## Sheet 4 — Analysis
+
+Performed summary analysis on the cleaned dataset.
+
+Analysis includes:
+
+- Employee count by department
+- Department-wise salary analysis
+- Employee status distribution
+- Monthly payroll
+- Business insights
+
+---
+
+# Key Insights
+
+- Sales is the largest department with **4 employees (36.4%)**
+- IT has the highest average salary (**67,500**)
+- Sales has the lowest average salary (**47,250**)
+- **72.7%** of employees are Active
+- Total monthly payroll is **₹6,01,000**
+
+---
+
+# Files Included
+
+```
+Employee_Data_Quality_Audit.xlsx
+README.md
+```
+
+---
+
+# What I Learned
+
+Through this project I practised the complete workflow of preparing raw data for analysis. Instead of only cleaning the dataset, I also documented every issue, maintained an audit trail, and generated business insights from the final cleaned data. This project helped strengthen my understanding of Excel functions, data quality principles, and structured data analysis.
 
 ---
 
 ## Author
 
-Eric  
-Aspiring Data Analyst | Excel · SQL · Python · Power BI  
-[GitHub Profile](https://github.com/ericccccccc-byte)
+**Eric**
+
+Aspiring Data Analyst
+
+**Skills:** Excel • SQL • Python • Power BI
+
+GitHub:
+https://github.com/ericccccccc-byte
